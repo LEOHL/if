@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta content="user-scalable=yes, width=device-width, initial-scale=1.0, minimum-scale=1" name="viewport">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <style>
+        html{
+            height: 100%;
+        }
+        body {
+            font: 16px/1.8 "Microsoft Yahei", verdana;
+            overflow-x: hidden;
+            height: 100%;
+            font-size: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        /* 右侧导航 */
+        #fullPage-nav {
+            _display: none;
+            font-size: 12px;
+        }
+        #fullPage-nav li {
+            width: 18px;
+            height: 18px;
+            margin: 10px 0 0;
+            vertical-align: middle;
+            padding: 4px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            transition: all 0.2s ease 0s; 
+        }
+        #fullPage-nav li:hover{
+            background-color: rgba(0,0,0,0.2);
+            cursor: pointer;
+        }
+        #fullPage-nav li a {
+            width: 8px;
+            height: 8px;
+            color: #8F9DA4;
+            text-decoration: none;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+        #fullPage-nav li .active {
+            background-position: 0 bottom;
+            background-color: 	#B4CDCD;
+        }
+
+        #fullPage-nav span {
+            display: none;
+        }
+        .fullPage-tooltip {
+            float: left;
+            top: 0;
+            margin-right: 5px;
+            font: 12px "Microsoft Yahei";
+            color: #8F9DA4;
+            line-height: 21px;
+        }
+        .section{
+            margin: 0;
+            height: 100vh !important;
+        }
+        .tableCell{
+            height: 100vh !important;
+        }
+        .section .bg {
+            width: 100%;
+            height: 100vh;
+            padding-top: 15%;
+        }
+        .bg1{
+            background: linear-gradient(10deg, #66a6b8 20%, #5471B9 80%);
+        }
+        .bg2{
+            background: linear-gradient(45deg, #f29c54 0%, #DB4367 100%);
+        }
+        .bg3{
+            background: linear-gradient(135deg, #23af56 0%, #67A79A 100%);
+        }
+        .bg4{
+            background: linear-gradient(160deg, #412F2F 15%, #6B2686 85%);
+        }
+        .item-box{
+            margin-left: auto;
+            margin-right: auto;
+            width: 360px;
+            height: 460px;
+            overflow: hidden;
+            white-space: break-all;
+            font-size: 16px;
+            line-height: 19px;
+            color: #fff;
+            padding: 15px;
+            font-family: cursive;
+            transition-delay: 1.2s;
+            transition: all 1s;
+        }
+        .box1{
+            background-color: rgba(0,153,255,0.3);
+            opacity: 0;  
+            -webkit-transform: translate3d(-100%, 0, 0);  
+                    transform: translate3d(-100%, 0, 0); 
+        }
+        .box2{
+            background-color: rgba(204,0,51,0.3);
+            opacity: 0;  
+            -webkit-transform: translate3d(100%, 0, 0);  
+                    transform: translate3d(100%, 0, 0);
+        }
+        .box3{
+            background-color: rgba(153,255,102,0.3);
+            opacity: 0;  
+            -webkit-transform: translate3d(-100%, 0, 0);  
+                    transform: translate3d(-100%, 0, 0);
+        }
+        .box4{
+            background-color: rgba(102,51,153,0.3);
+            opacity: 0;  
+            -webkit-transform: translate3d(100%, 0, 0);  
+                    transform: translate3d(100%, 0, 0); 
+        }
+        .fa-quote-left{
+            float: left;
+            margin-right: 15px;
+        }
+        .fa-quote-right{
+            float: right;
+            margin-left: 15px;
+        }
+        .active .item-box{
+            opacity: 1;  
+            -webkit-transform: translate3d(0, 0, 0);  
+                    transform: translate3d(0, 0, 0); 
+        }
+        
+    </style>
+    <script>
+        $(function(){
+            $.fn.fullpage({
+                    resize: 'true',
+                    loopBottom: 'true',
+                    navigation: 'true',
+                    easing: 'easeInSine',
+                    anchors: ['page1', 'page2', 'page3', 'page4'],
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="section section1">
+            <div class="bg bg1">
+                <div class="item-box box1">
+                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    <p>不需要晚多久，就再过那么几年，那时我们有稳定的收入，靠谱的工作，所有的一切步入正轨。
+                       我不在是一个青涩的毛头小伙子，而是一个成熟的男人，你不在是一个追梦的漂浮女生，
+                       而是一个只寻求安稳生活的女人。</p>
+                    <p>到那时候，那时候，我们在相爱，如果我们可以晚一些遇见。
+                       不需要多久，就再过那么几年。那时候我已经学会了知足学会了包容和珍惜，
+                       而你也真的能从容的面对那些不停追逐你的异性。</p>
+                    <p>到那时候，那时候，我们在相爱，如果我们可以晚一些遇见。
+                       不需要多久，就再过那么几年。那时候社会的历练会让我身上有足够的闪光点，
+                       照耀得你不想再望向别人；那时候生活和现实会让我觉得他是安稳，
+                       使你觉得有一直走下去的“家”的感觉。</p>
+                    <i class="fa fa-quote-right" aria-hidden="true"></i>
+                </div>
+            </div>
+    </div>
+    <div class="section section2">
+            <div class="bg bg2">
+                <div class="item-box box2">
+                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    <p>到那时候，那时候，我们再相爱，如果我们可以晚一些遇见。
+                       不需要多久，就再那么几年。那时候我们的人生观价值观理想追求也许会一致，
+                       我们的生活圈子也许会向一起靠拢。我们不会再因为没有共同语言而争吵，
+                       不会在因为意见不合而互相伤害，不会互相猜疑不信任。
+                       我们会坐在我们共同的房子里听着我们都喜欢的音乐聊一些工作上的朋友中的生活琐事。</p>
+                    <p>到那时候，那时候，我们在相爱，如果我们可以晚一些遇见。
+                       不需要多久，就在过那么几年。那时候我们可以一起推着手推车去超级市场购物，
+                       一起在节假日买礼物给对方的父母。我会在母亲节同样给你的妈妈送上康乃馨，
+                       你也会在我父亲生日的时候定做蛋糕并署上你的名字。</p>
+                    <p>不需要多久，就再过那么几年。在我起床后有一支你为我涂好牙膏的牙刷，
+                       在你熟睡之后的轻微鼾声中为你裹严有点凌乱的被褥。</p>
+                    <i class="fa fa-quote-right" aria-hidden="true"></i>
+                </div>
+            </div>
+    </div>
+    <div class="section section3">
+            <div class="bg bg3">
+                <div class="item-box box3">
+                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    <p>到那时候，那时候，我们在相爱，如果我们可以晚一些相遇。
+                       不需要多久，就再过那么几年。
+                       那时候我不会再有敏感的神经质，你也不再有暴躁的坏脾气。
+                       到那时候，那时候，我们在相爱，如果我们可以晚一些遇见。
+                       那么似乎所有的问题都不再是问题，所有的分歧都不再是分歧。</p>
+                    <p>那时候，我们是不是很合拍。
+                       那时候，我们还会不会很默契。
+                       如果真的有那么一天，你会不会再回到我身边，做我们未做完的事情而不是所有的一切都被取代。
+                       也许已经不会了吧，我们身边也许已经有了这个在对的时间遇见的的人，那对的爱情就应该继续了。
+　　                    又也许，你的那个他还幸运的在你的身边，物换星移。</p>
+                    <p>总有一天我们都会明白，那是一种追寻，或许到最后都不曾拥有过，但那是属于最纯真的东西，
+                       每个人简单的时候对于感情都有一个童话，也许在时间的驾驭下看到了太多的背叛。</p>
+                    <i class="fa fa-quote-right" aria-hidden="true"></i>
+                </div>
+            </div>
+    </div>
+    <div class="section section4">
+            <div class="bg bg4">
+                <div class="item-box box4">
+                    <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    <p>当我们学会享受寂寞遏制住没有责任感的“新鲜感”的时候，我们才可以真的羡慕，相濡以沫执子之手，
+                       我们才不会听悲伤的歌看幸福的戏，经历了青春年少时的疯狂浪漫，也看懂了许多失落遗憾，
+                       童话般的感情只能留给曾经或是梦境，生活不会那么单纯，所以要以一个坦然的心去生活。
+                       也许在那个时候，我一直都不曾在乎彼此过去的种种，也不曾嫌弃，那么我们就在一起。</p>
+                    <p>那年的那一天，我们有了个约定，你叫我傻蛋，我叫你笨蛋，傻蛋说过5年后我一定会去找你。
+                       可是，不知道是什么原因，我们把彼此的电话号码、QQ删了N多次，然而又加了N多次。
+                       或许那个时候我还像个小孩，容易憋屈闹矛盾，无理取闹的生气。不知多少个夜里，
+                       我梦见着求着原谅，可始终没有得到一个好点的梦境。
+                       现在，我懂了很多，明白了很多，虽然你我未曾蒙面，远隔天涯，
+                       可却咫尺身边，那味道拥有如此般的熟悉。
+                       也许我年龄没你大，如果可以，我愿意；</p>
+                    <p>也许我没你成熟，如果可以，我愿意；</p>
+                    <i class="fa fa-quote-right" aria-hidden="true"></i>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
